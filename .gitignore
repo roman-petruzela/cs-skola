@@ -1,0 +1,48 @@
+# Build výstupy
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vcxproj.filters
+ipch/
+*.sdf
+*.opensdf
+*.cachefile
+
+# ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# NuGet
+packages/
+*.nupkg
+
+# Testy a pokrytí
+TestResults/
+*.coverage
+*.coveragexml
+
+# Logy a dočasné soubory
+*.log
+*.tmp
+*.bak
+~$*
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Lokální nastavení Claude a pomocné skripty
+.claude/
+git.bat
+.claude/
