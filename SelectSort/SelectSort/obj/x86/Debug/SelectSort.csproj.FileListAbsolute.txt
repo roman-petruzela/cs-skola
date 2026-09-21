@@ -1,0 +1,4 @@
+Z:\disk\c#\SelectSort\SelectSort\bin\Debug\SelectSort.exe
+Z:\disk\c#\SelectSort\SelectSort\bin\Debug\SelectSort.pdb
+Z:\disk\c#\SelectSort\SelectSort\obj\x86\Debug\SelectSort.exe
+Z:\disk\c#\SelectSort\SelectSort\obj\x86\Debug\SelectSort.pdb
