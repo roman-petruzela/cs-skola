@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,6 +25,7 @@ namespace SelectSort
                 pole[pozice] = tmp;
             }
         }
+
         public static void selectionSortS(int[] pole)
         {
             for (int j = 0; j < pole.Length - 1; j++)
@@ -38,17 +39,32 @@ namespace SelectSort
                 pole[pozice] = tmp;
             }
         }
+
+        /*
+            vytvořte program, který do pole náhodně vygeneruje 1000 čísel v intervalu -1000 až 1000
+            program se zeptá, zda chceme čísla vypsat seřazená vzestupně nebo sestupně
+            následně seřazené hodnoty vypíše
+            použijde vytvořené metody pro řazení
+        */
         public static void pr1()
         {
-            int[] pole = {10,1,2,15,-1,8};
-            selectionSortS(pole);
+            Random rnd = new Random();
+            int[] pole = new int[1000];
+            for (int i = 0; i < pole.Length; i++)
+                pole[i] = rnd.Next(-1000, 1001);
+
+            Console.Write("Vypsat cisla vzestupne (v) nebo sestupne (s)? ");
+            string volba = Console.ReadLine().Trim().ToLower();
+
+            if (volba == "s")
+                selectionSortS(pole);
+            else
+                selectionSortVz(pole);
+
             foreach (int x in pole) Console.Write(x + "; ");
             Console.WriteLine();
-            selectionSortVz(pole);
-            foreach (int x in pole) Console.Write(x + "; ");
             Console.ReadKey();
         }
-
 
     }
 }
