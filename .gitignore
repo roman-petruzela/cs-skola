@@ -18,14 +18,6 @@ ipch/
 *.opensdf
 *.cachefile
 
-# ReSharper
-_ReSharper*/
-*.[Rr]e[Ss]harper
-
-# NuGet
-packages/
-*.nupkg
-
 # Testy a pokrytí
 TestResults/
 *.coverage
