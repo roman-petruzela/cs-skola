@@ -1,7 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Diagnostics;
 
 namespace SelectSort
 {
@@ -9,7 +10,8 @@ namespace SelectSort
     {
         static void Main(string[] args)
         {
-            pr1();
+            pr3();
+            Console.ReadKey();
         }
 
         public static void selectionSortVz(int[] pole)
@@ -63,8 +65,43 @@ namespace SelectSort
 
             foreach (int x in pole) Console.Write(x + "; ");
             Console.WriteLine();
-            Console.ReadKey();
-        }
 
+        }
+        public static void pr2(){
+            int n = 1000000;
+            Stopwatch sw = new Stopwatch();
+            Random rng = new Random();
+            int[] pole = new int[n];
+            for(int i = 0; i < n; i++)
+                pole[i]=rng.Next(-1000,1000);
+            sw.Start();
+            selectionSortS(pole);
+            sw.Stop();
+            long cas = sw.ElapsedMilliseconds;
+            foreach(int c in pole)
+                Console.WriteLine(c);
+            Console.WriteLine("Čas: {0} ms",cas);
+        }
+        public static void pr3(){
+            int n = 100000;
+            Stopwatch sw = new Stopwatch();
+            Random rng = new Random();
+            int[] pole1 = new int[n];
+            int[] pole2 = new int[n];
+            for(int i = 0; i < n; i++){
+                pole1[i]=rng.Next(-1000,1000);
+                pole2[i]=rng.Next(-1000,1000);
+            }
+            sw.Start();
+            selectionSortS(pole1);
+            sw.Stop();
+            long cas1 = sw.ElapsedMilliseconds;
+            sw.Start();
+            Array.Sort(pole2);
+            sw.Stop();
+            long cas2 = sw.ElapsedMilliseconds;
+            Console.WriteLine("Čas: {0} ms",cas1);
+            Console.WriteLine("Čas: {0} ms",cas2-cas1);
+        }
     }
 }
